@@ -60,3 +60,15 @@ and replace the `<div class="book">…</div>` block in `index.html` with:
 ```html
 <img src="cover.jpg" alt="Hands-On RAG for Production" class="book-img" />
 ```
+
+## 中文学习笔记（`docs/notes/`）
+
+`notes/chapterN.md` 渲染后的静态页面，部署后访问 `<Pages 根地址>/notes/`。
+改了 Markdown 之后在仓库根目录重新生成，然后照常提交 `docs/`：
+
+```bash
+pip install markdown-it-py
+python notes/build_html.py
+```
+
+侧边栏的章节标题和首页的章节简介写在 `docs/notes/assets/site.js` 顶部的 `CHAPTERS` 里。
