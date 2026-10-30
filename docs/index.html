@@ -15,12 +15,9 @@
   <meta name="twitter:title" content="Hands-On RAG for Production" />
   <meta name="twitter:description" content="Design, develop, and deploy production-ready RAG applications. By Ofer Mendelevitch and Forrest Sheng Bao." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d95602'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23fbfaf8' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f766e'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23fbfaf8' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
-
+  <script>try{const t=localStorage.getItem('rag-notes-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch{}</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,7 +26,7 @@
   <header class="site-header" id="top">
     <div class="wrap header-inner">
       <a class="brand" href="#top">
-        <span class="brand-mark">RAG</span>
+        <span class="brand-mark">R</span>
         <span class="brand-text">Hands-On RAG for Production</span>
       </a>
       <nav class="nav" aria-label="Primary">
@@ -38,6 +35,7 @@
         <a href="#contents">Contents</a>
         <a href="#code">Code</a>
         <a href="#authors">Authors</a>
+        <a href="notes/" class="nav-notes">中文笔记</a>
         <a href="#buy" class="nav-cta">Get the book</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -50,6 +48,7 @@
       <a href="#contents">Contents</a>
       <a href="#code">Code</a>
       <a href="#authors">Authors</a>
+      <a href="notes/" class="nav-notes">中文学习笔记</a>
       <a href="#buy">Get the book</a>
     </nav>
   </header>
@@ -67,7 +66,8 @@
           system that holds up under real traffic, real data, and real users.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#buy">Get the book</a>
+          <a class="btn btn-primary" href="notes/">阅读中文学习笔记 &rarr;</a>
+          <a class="btn btn-ghost" href="#buy">Get the book</a>
           <a class="btn btn-ghost" href="https://github.com/ofermend/hands-on-rag" target="_blank" rel="noopener">
             Browse the code &rarr;
           </a>
@@ -78,6 +78,27 @@
       <div class="hero-cover">
         <img class="book-cover" src="hands-on-rag-front.jpg"
              alt="Hands-On RAG for Production — book cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOTES ============ -->
+  <section class="notes-band" id="notes">
+    <div class="wrap">
+      <div class="notes-card">
+        <div>
+          <p class="kicker">中文学习笔记</p>
+          <h2>10 章逐章笔记：从原型到生产</h2>
+          <p>
+            对照原书正文和每章 notebook 整理：先用大白话讲清楚概念为什么存在，再拆解代码，最后用术语表收尾。
+          </p>
+          <div class="notes-pills">
+            <span class="pill">混合检索</span><span class="pill">重排序</span><span class="pill">护栏</span>
+            <span class="pill">LLM-as-a-Judge</span><span class="pill">MCP</span><span class="pill">多模态</span>
+            <span class="pill">GraphRAG</span>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="notes/">开始阅读 &rarr;</a>
       </div>
     </div>
   </section>
@@ -197,16 +218,16 @@
       <p class="kicker">Inside</p>
       <h2 class="section-title">Table of contents</h2>
       <ol class="toc">
-        <li><span class="toc-num">01</span><span class="toc-name">Introduction to Retrieval-Augmented Generation (RAG)</span></li>
-        <li><span class="toc-num">02</span><span class="toc-name">The Base RAG Stack</span></li>
-        <li><span class="toc-num">03</span><span class="toc-name">Scaling Your RAG Stack</span></li>
-        <li><span class="toc-num">04</span><span class="toc-name">Deploying RAG to Production</span></li>
-        <li><span class="toc-num">05</span><span class="toc-name">The RAG Platform</span></li>
-        <li><span class="toc-num">06</span><span class="toc-name">Evaluating Your RAG Application</span></li>
-        <li><span class="toc-num">07</span><span class="toc-name">From RAG to AI Agents</span></li>
-        <li><span class="toc-num">08</span><span class="toc-name">Multimodal RAG</span></li>
-        <li><span class="toc-num">09</span><span class="toc-name">Knowledge-Enhanced RAG</span></li>
-        <li><span class="toc-num">10</span><span class="toc-name">The Future of RAG</span></li>
+        <li><a href="notes/ch01.html"><span class="toc-num">01</span><span class="toc-name">Introduction to Retrieval-Augmented Generation (RAG)</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch02.html"><span class="toc-num">02</span><span class="toc-name">The Base RAG Stack</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch03.html"><span class="toc-num">03</span><span class="toc-name">Scaling Your RAG Stack</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch04.html"><span class="toc-num">04</span><span class="toc-name">Deploying RAG to Production</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch05.html"><span class="toc-num">05</span><span class="toc-name">The RAG Platform</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch06.html"><span class="toc-num">06</span><span class="toc-name">Evaluating Your RAG Application</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch07.html"><span class="toc-num">07</span><span class="toc-name">From RAG to AI Agents</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch08.html"><span class="toc-num">08</span><span class="toc-name">Multimodal RAG</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch09.html"><span class="toc-num">09</span><span class="toc-name">Knowledge-Enhanced RAG</span><span class="toc-go">读笔记 &rarr;</span></a></li>
+        <li><a href="notes/ch10.html"><span class="toc-num">10</span><span class="toc-name">The Future of RAG</span><span class="toc-go">读笔记 &rarr;</span></a></li>
       </ol>
     </div>
   </section>
@@ -229,18 +250,18 @@
       </div>
       <div class="code-window" aria-hidden="true">
         <div class="code-bar"><span></span><span></span><span></span></div>
-        <pre class="code-body"><span class="c-com"># chapter1/sample-rag.ipynb</span>
-<span class="c-kw">from</span> langchain <span class="c-kw">import</span> hub
-<span class="c-kw">from</span> langchain_community.vectorstores <span class="c-kw">import</span> FAISS
+        <pre class="code-body"><span class="tk-cm"># chapter1/sample-rag.ipynb</span>
+<span class="tk-kw">from</span> langchain <span class="tk-kw">import</span> hub
+<span class="tk-kw">from</span> langchain_community.vectorstores <span class="tk-kw">import</span> FAISS
 
 docs   = loader.load()
 chunks = splitter.split_documents(docs)
 store  = FAISS.from_documents(chunks, embeddings)
 
 answer = rag_chain.invoke(
-    <span class="c-str">"What did Alice find down the rabbit hole?"</span>
+    <span class="tk-st">"What did Alice find down the rabbit hole?"</span>
 )
-<span class="c-com"># → grounded, cited, and ready to ship</span></pre>
+<span class="tk-cm"># → grounded, cited, and ready to ship</span></pre>
       </div>
     </div>
   </section>
@@ -332,6 +353,7 @@ answer = rag_chain.invoke(
         <a href="#code">Code</a>
         <a href="#authors">Authors</a>
         <a href="#buy">Get the book</a>
+        <a href="notes/">中文笔记</a>
         <a href="https://github.com/ofermend/hands-on-rag" target="_blank" rel="noopener">GitHub</a>
       </nav>
       <p class="footer-fine">&copy; 2026 Ofer Mendelevitch &amp; Forrest Sheng Bao. Published by O&rsquo;Reilly Media.</p>
@@ -357,6 +379,20 @@ answer = rag_chain.invoke(
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+    // Light / dark toggle (same storage key as the notes pages)
+    const tbtn = Object.assign(document.createElement('button'), {
+      id: 'theme-btn', type: 'button', innerHTML: '&#9789;',
+      onclick: () => {
+        const root = document.documentElement;
+        const now = root.getAttribute('data-theme');
+        const dark = now ? now === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        const next = dark ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('rag-notes-theme', next); } catch {}
+      }
+    });
+    tbtn.setAttribute('aria-label', 'Toggle light / dark');
+    document.body.appendChild(tbtn);
   </script>
 </body>
 </html>
